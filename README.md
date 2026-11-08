@@ -2,6 +2,25 @@
 
 An individual Python and Pandas analysis of 2023–24 NBA regular-season players who appeared off the bench more often than they started. The project ranks qualified rotation players across three-point shooting, two-point shooting, free throws, and rebounding.
 
+[Read the analysis notebook](notebooks/nba_bench_impact_analysis.ipynb) · [Explore the Python source](src/nba_analysis.py) · [View result tables](results/)
+
+![Qualified NBA bench-majority three-point leaders in the 2023–24 regular season](assets/figures/three_point_leaders.png)
+
+*Preview: players with at least 40 games, more bench appearances than starts and at least 4.0 three-point attempts per game. Source: Basketball-Reference / Sports Reference LLC.*
+
+Other result charts: [two-point shooting](assets/figures/two_point_leaders.png) · [free throws](assets/figures/free_throw_leaders.png) · [rebounding](assets/figures/rebounding_leaders.png).
+
+## Skills demonstrated
+
+| Skill | Evidence in this project |
+| --- | --- |
+| **Python and Pandas data analysis** | [Reusable functions](src/nba_analysis.py) load CSV/Excel, coerce numeric fields, filter records, group by player and build sorted leaderboards. |
+| **Data cleaning and deduplication** | Multi-team season-row selection prevents double counting; required columns and impossible games/starts combinations are checked in [source](src/nba_analysis.py). |
+| **Exploratory data analysis and cohort design** | Transparent games-played, bench-appearance and shot-attempt thresholds make comparisons inspectable. |
+| **Matplotlib data visualization** | Consistent charts show percentage/rate labels, threshold context and source attribution; [chart function](src/nba_analysis.py). |
+| **Jupyter and reproducible analysis** | The [executed notebook](notebooks/nba_bench_impact_analysis.ipynb) connects preparation, cohort counts, rankings and exported results. |
+| **pytest and analytical validation** | [Tests](tests/test_nba_analysis.py) exercise multi-team deduplication, cohort eligibility and leaderboard sorting. |
+
 ## Why this project matters
 
 Bench-player comparisons are easy to distort through small samples and traded-player duplicates. This analysis improves the original coursework by:
