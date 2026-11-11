@@ -3,10 +3,12 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Mapping
+from typing import TYPE_CHECKING, Mapping
 
-import matplotlib.pyplot as plt
 import pandas as pd
+
+if TYPE_CHECKING:
+    from matplotlib.figure import Figure
 
 
 REQUIRED_COLUMNS = {
@@ -176,10 +178,12 @@ def plot_leaderboard(
     subtitle: str,
     output_path: str | Path,
     percentage: bool = False,
-) -> plt.Figure:
+) -> Figure:
     """Create a consistent horizontal ranking chart and save it as a PNG."""
     chart = frame.sort_values(value_column, ascending=True)
     values = chart[value_column] * 100 if percentage else chart[value_column]
+
+    import matplotlib.pyplot as plt
 
     fig, ax = plt.subplots(figsize=(10, 6))
     bars = ax.barh(chart["Player"], values, color="#256D85")

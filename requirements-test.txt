@@ -1,0 +1,4 @@
+# Synthetic transformation tests only; no plotting/notebook or source download.
+numpy==2.3.5
+pandas==2.2.3
+pytest==8.4.1

@@ -67,6 +67,25 @@ tests/              Data-selection and cohort tests
 
 ## Run locally
 
+The synthetic analytical tests were rerun in November 2026 with **CPython
+3.12.14, NumPy 2.3.5, Pandas 2.2.3 and pytest 8.4.1**. They need no private
+workbook or downloaded sports records. Use the small test-only environment:
+
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements-test.txt
+PYTHONDONTWRITEBYTECODE=1 python -m pytest -q
+```
+
+The [CI workflow](.github/workflows/checks.yml) runs that same test scope with
+Python 3.12. It does not retrieve the raw source or re-execute the historical
+notebook. Analytical imports do not require Matplotlib; plotting imports it
+only when a chart is requested. Check actual Actions results before claiming a
+remote pass.
+
+For the notebook and chart environment, use the original broader requirements:
+
 ```bash
 python -m venv .venv
 source .venv/bin/activate
@@ -82,6 +101,9 @@ python -m jupyter nbconvert --to notebook --execute --inplace \
 ```
 
 For a private Excel copy of the original workbook, set `NBA_DATA_PATH` before execution. The public package does not include that workbook.
+
+The historical notebook and saved results were preserved during this test/CI
+extension; they were not rerun as part of it.
 
 ## Data provenance and responsible use
 
