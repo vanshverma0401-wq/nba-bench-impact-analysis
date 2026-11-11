@@ -8,7 +8,7 @@ An individual Python and Pandas analysis of 2023–24 NBA regular-season players
 
 *Preview: players with at least 40 games, more bench appearances than starts and at least 4.0 three-point attempts per game. Source: Basketball-Reference / Sports Reference LLC.*
 
-Other result charts: [two-point shooting](assets/figures/two_point_leaders.png) · [free throws](assets/figures/free_throw_leaders.png) · [rebounding](assets/figures/rebounding_leaders.png).
+[View the remaining result charts below](#more-result-charts).
 
 ## Skills demonstrated
 
@@ -41,6 +41,28 @@ After selecting one row per player, the analysis contains 572 unique regular-sea
 - Andre Drummond led the cohort with 9.0 rebounds per game.
 
 These findings describe the stated cohort and thresholds, not every NBA player.
+
+## More result charts
+
+These charts use the same **2023–24 regular-season bench-majority cohort**: at least 40 games and `G - GS > GS`. Statistical source: Basketball-Reference / Sports Reference LLC.
+
+### Two-point shooting leaders
+
+![Qualified NBA bench-majority two-point shooting leaders in the 2023–24 regular season](assets/figures/two_point_leaders.png)
+
+*Minimum 5.0 two-point attempts per game. Walker Kessler leads at 68.0%.*
+
+### Free-throw shooting leaders
+
+![Qualified NBA bench-majority free-throw shooting leaders in the 2023–24 regular season](assets/figures/free_throw_leaders.png)
+
+*Minimum 2.0 free-throw attempts per game. Bogdan Bogdanović leads at 92.1%.*
+
+### Rebounding leaders
+
+![NBA bench-majority rebounding leaders in the 2023–24 regular season](assets/figures/rebounding_leaders.png)
+
+*Rebounds per game among the defined cohort. Andre Drummond leads at 9.0 rebounds per game.*
 
 ## Method
 
